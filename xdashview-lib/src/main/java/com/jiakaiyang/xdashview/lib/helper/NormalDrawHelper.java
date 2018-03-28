@@ -2,6 +2,7 @@ package com.jiakaiyang.xdashview.lib.helper;
 
 
 import android.graphics.Canvas;
+import android.graphics.Paint;
 
 import com.jiakaiyang.xdashview.lib.DashConfig;
 
@@ -12,12 +13,61 @@ import com.jiakaiyang.xdashview.lib.DashConfig;
 public class NormalDrawHelper extends DrawHelper {
     private static final String TAG = "NormalDrawHelper";
 
-    public NormalDrawHelper(DashConfig dashConfig, Canvas canvas) {
-        super(dashConfig, canvas);
+    public NormalDrawHelper(DashConfig dashConfig, Canvas canvas, Paint paint) {
+        super(dashConfig, canvas, paint);
     }
 
     @Override
     public void draw() {
+        switch (dashConfig.getOrientation()) {
+            case DashConfig.ORIENTATION_VERTICAL:
+                drawVerticalLine(canvas);
+                break;
+            case DashConfig.ORIENTATION_HORIZONTAL:
+                drawHorizontalLine(canvas);
+                break;
+        }
+    }
 
+
+    private void drawHorizontalLine(Canvas canvas) {
+        float cellWidth = dashConfig.getCellWidth();
+        float cellHeight = dashConfig.getCellHeight();
+        float dashWidth = dashConfig.getDashWidth();
+        float widthSize = dashConfig.getDashViewWidth();
+
+        float totalWidth = 0;
+        // save state
+        canvas.save();
+        float[] pts = {0, 0, cellWidth, 0};
+
+        canvas.translate(0, cellHeight / 2);
+        while (totalWidth <= widthSize) {
+            canvas.drawLines(pts, paint);
+            canvas.translate(cellWidth + dashWidth, 0);
+            totalWidth += cellWidth + dashWidth;
+        }
+        // restore state
+        canvas.restore();
+    }
+
+
+    private void drawVerticalLine(Canvas canvas) {
+        float cellWidth = dashConfig.getCellWidth();
+        float cellHeight = dashConfig.getCellHeight();
+        float dashWidth = dashConfig.getDashWidth();
+        float heightSize = dashConfig.getDashViewHeight();
+
+        float totalWidth = 0;
+        canvas.save();
+        float[] pts = {0, 0, 0, cellWidth};
+
+        canvas.translate(cellHeight / 2, 0);
+        while (totalWidth <= heightSize) {
+            canvas.drawLines(pts, paint);
+            canvas.translate(0, cellWidth + dashWidth);
+            totalWidth += cellWidth + dashWidth;
+        }
+        canvas.restore();
     }
 }

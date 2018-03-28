@@ -1,6 +1,7 @@
 package com.jiakaiyang.xdashview.lib.helper;
 
 import android.graphics.Canvas;
+import android.graphics.Paint;
 
 import com.jiakaiyang.xdashview.lib.DashConfig;
 
@@ -12,10 +13,12 @@ import com.jiakaiyang.xdashview.lib.DashConfig;
 public abstract class DrawHelper {
     protected DashConfig dashConfig;
     protected Canvas canvas;
+    protected Paint paint;
 
-    public DrawHelper(DashConfig dashConfig, Canvas canvas) {
+    public DrawHelper(DashConfig dashConfig, Canvas canvas, Paint paint) {
         this.dashConfig = dashConfig;
         this.canvas = canvas;
+        this.paint = paint;
     }
 
     /**

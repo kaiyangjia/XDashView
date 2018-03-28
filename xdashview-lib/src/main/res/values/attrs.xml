@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XDashView">
+
+        <!-- base attrs start-->
+        <attr name="dashType" format="enum">
+            <!-- this enum values should same with DashConfig.CELL_TYPE_ fields-->
+            <enum name="normal" value="100" />
+        </attr>
+        <attr name="dashWidth" format="dimension" />
+        <attr name="cellWidth" format="dimension" />
+        <attr name="cellHeight" format="dimension" />
+        <!-- base attrs end-->
+
+
+        <!-- normal type start-->
+        <attr name="lineColor" format="color" />
+        <attr name="dashOrientation" format="integer" />
+        <!-- normal type end-->
+
+    </declare-styleable>
+</resources>
