@@ -15,7 +15,10 @@
 
         <!-- normal type start-->
         <attr name="lineColor" format="color" />
-        <attr name="dashOrientation" format="integer" />
+        <attr name="dashOrientation" format="enum">
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="2" />
+        </attr>
         <!-- normal type end-->
 
     </declare-styleable>

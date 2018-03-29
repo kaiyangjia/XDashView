@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xdashview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.jiakaiyang.xdashview.lib.XDashView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        xdashview:dashType="normal" />
+
+
+    <com.jiakaiyang.xdashview.lib.XDashView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        xdashview:dashOrientation="horizontal"
+        xdashview:dashType="normal"
+        xdashview:lineColor="@color/colorAccent" />
+
+    <com.jiakaiyang.xdashview.lib.XDashView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        xdashview:cellWidth="15dp"
+        xdashview:dashOrientation="horizontal"
+        xdashview:dashType="normal"
+        xdashview:lineColor="@color/colorAccent" />
+
+    <com.jiakaiyang.xdashview.lib.XDashView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        xdashview:dashOrientation="horizontal"
+        xdashview:dashType="normal"
+        xdashview:dashWidth="15dp"
+        xdashview:lineColor="@color/colorAccent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.jiakaiyang.xdashview.lib.XDashView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            xdashview:dashOrientation="vertical"
+            xdashview:dashType="normal" />
+
+
+        <com.jiakaiyang.xdashview.lib.XDashView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            xdashview:dashOrientation="vertical"
+            xdashview:dashType="normal"
+            xdashview:lineColor="@color/colorAccent" />
+
+        <com.jiakaiyang.xdashview.lib.XDashView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            xdashview:cellWidth="15dp"
+            xdashview:dashOrientation="vertical"
+            xdashview:dashType="normal"
+            xdashview:lineColor="@color/colorAccent" />
+
+        <com.jiakaiyang.xdashview.lib.XDashView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            xdashview:dashOrientation="vertical"
+            xdashview:dashType="normal"
+            xdashview:dashWidth="15dp"
+            xdashview:lineColor="@color/colorAccent" />
+    </LinearLayout>
+
+</LinearLayout>

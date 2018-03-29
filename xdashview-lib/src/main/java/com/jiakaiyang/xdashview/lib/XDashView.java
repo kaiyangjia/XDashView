@@ -25,7 +25,7 @@ public class XDashView extends View {
     public static final int DEFAULT_DASH_WIDTH = 100;
     public static final int DEFAULT_CELL_WIDTH = 100;
     public static final int DEFAULT_CELL_HEIGHT = 10;
-    public static final int DEFAULT_LINE_COLOR = 0x9E9E9E;
+    public static final int DEFAULT_LINE_COLOR = 0xff888888;
     public static final int DEFAULT_DASH_ORIENTATION = DashConfig.ORIENTATION_HORIZONTAL;
 
     private DashConfig dashConfig;
