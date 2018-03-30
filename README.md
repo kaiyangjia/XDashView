@@ -34,8 +34,34 @@ This library will support multiple dash style. Type like :
 
 
 
+## Usage
+
+step 1. add my bintray repo to your `root project` build.gradle(This step will be remove):
+
+```groovy
+allprojects {
+    repositories {
+        maven { url "https://dl.bintray.com/kaiyangjia/maven" }
+    }
+}
+```
+
+
+
+step 2. add dependency to your `app` module:
+
+```groovy
+compile 'com.jiakaiyang:xdashview:0.9'
+```
+
+
+
+step 3. rock it!
+
+
+
 ## TODO
 
-- [ ] publish this lib to jcenter.
+- [x] publish this lib to jcenter.
 - [ ] add Shaped Type implements.
 - [ ] add Drawable Type implements.
