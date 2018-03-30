@@ -24,5 +24,19 @@ public abstract class DrawHelper {
     /**
      * Perform draw to the canvas of target DashView
      */
-    public abstract void draw();
+    public void draw() {
+        switch (dashConfig.getOrientation()) {
+            case DashConfig.ORIENTATION_VERTICAL:
+                drawVerticalLine(canvas);
+                break;
+            case DashConfig.ORIENTATION_HORIZONTAL:
+                drawHorizontalLine(canvas);
+                break;
+        }
+    }
+
+    protected abstract void drawVerticalLine(Canvas canvas);
+
+    protected abstract void drawHorizontalLine(Canvas canvas);
+
 }

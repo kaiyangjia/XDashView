@@ -17,20 +17,9 @@ public class NormalDrawHelper extends DrawHelper {
         super(dashConfig, canvas, paint);
     }
 
+
     @Override
-    public void draw() {
-        switch (dashConfig.getOrientation()) {
-            case DashConfig.ORIENTATION_VERTICAL:
-                drawVerticalLine(canvas);
-                break;
-            case DashConfig.ORIENTATION_HORIZONTAL:
-                drawHorizontalLine(canvas);
-                break;
-        }
-    }
-
-
-    private void drawHorizontalLine(Canvas canvas) {
+    protected void drawHorizontalLine(Canvas canvas) {
         float cellWidth = dashConfig.getCellWidth();
         float cellHeight = dashConfig.getCellHeight();
         float dashWidth = dashConfig.getDashWidth();
@@ -52,7 +41,8 @@ public class NormalDrawHelper extends DrawHelper {
     }
 
 
-    private void drawVerticalLine(Canvas canvas) {
+    @Override
+    protected void drawVerticalLine(Canvas canvas) {
         float cellWidth = dashConfig.getCellWidth();
         float cellHeight = dashConfig.getCellHeight();
         float dashWidth = dashConfig.getDashWidth();

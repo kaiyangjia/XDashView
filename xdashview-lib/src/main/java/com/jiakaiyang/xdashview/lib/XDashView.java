@@ -77,12 +77,16 @@ public class XDashView extends View {
         dashConfig.setOrientation(dashOrientation);
         typedArray.recycle();
 
-        // create paint
-        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setColor(lineColor);
-        paint.setStrokeWidth(cellHeight);
+
+        initPaint();
     }
 
+    private void initPaint() {
+        // create paint
+        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setColor(dashConfig.getLineColor());
+        paint.setStrokeWidth(dashConfig.getCellHeight());
+    }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
